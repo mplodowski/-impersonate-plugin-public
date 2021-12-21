@@ -1,5 +1,9 @@
 # Impersonate Plugin
 
+**Demo URL:** https://october-demo.renatio.com/backend/backend/auth/signin  
+**Login:** impersonate  
+**Password:** impersonate
+
 Easy impersonate backend user.
 
 > This plugin is fully compatible with the latest version of OctoberCMS 2.x.
