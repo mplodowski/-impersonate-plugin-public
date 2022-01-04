@@ -33,3 +33,31 @@ Please use [GitHub Issues Page](https://github.com/mplodowski/impersonate-plugin
 > Reviews should not be used for getting support or reporting bugs, if you need support please use the Plugin support link.
 
 Icon made by [Darius Dan](https://www.flaticon.com/authors/darius-dan) from [www.flaticon.com](https://www.flaticon.com/).
+
+# Documentation
+
+## Usage
+
+After installation plugin will add impersonate column to backend users list.
+
+Only super admins and users with added permission `User impersonation` (displayed in System Tab) will be able to impersonate other users.
+
+## Events
+
+There are two events that you can hook into, before and after user is impersonated.
+
+```
+use Backend\Models\User;
+
+User::extend(function ($model) {
+    $model->bindEvent('model.auth.beforeImpersonate', function ($oldUser) use ($model) {
+        traceLog($oldUser->full_name.' is now impersonating '.$model->full_name);
+    });
+});
+
+User::extend(function ($model) {
+    $model->bindEvent('model.auth.afterImpersonate', function ($oldUser) use ($model) {
+        traceLog($oldUser->full_name.' has stopped impersonating '.$model->full_name);
+    });
+});
+```
