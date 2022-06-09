@@ -1,12 +1,10 @@
 # Impersonate Plugin
 
-**Demo URL:** https://october-demo.renatio.com/backend/backend/auth/signin  
-**Login:** impersonate  
+**Demo URL:** https://october-demo.renatio.com/backend/backend/auth/signin
+**Login:** impersonate
 **Password:** impersonate
 
 Easy impersonate backend user.
-
-> This plugin is fully compatible with the latest version of OctoberCMS 2.x.
 
 This plugin adds ability to impersonate other backend users. As an admin you can view all screens as if you are logged in as another user. This allows you to easily spot a problem that your user might be reporting.
 
